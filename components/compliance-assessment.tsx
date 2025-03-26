@@ -9,7 +9,7 @@ import { QuestionNavigator } from "@/components/question-navigator"
 
 export type Answer = {
   questionId: number
-  compliant: boolean
+  compliant?: boolean
   subQuestionValue?: number
   selectedRecommendationId?: string
 }
@@ -102,7 +102,6 @@ export function ComplianceAssessment() {
     if (!newAnswers[index]) {
       newAnswers[index] = {
         questionId: questionsData[index].id,
-        compliant: false,
       }
       setAnswers(newAnswers)
     }

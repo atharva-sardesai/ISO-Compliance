@@ -56,8 +56,8 @@ export function RecommendationPanel({
       }
     }
 
-    // Ensure subQuestionValue is a number, default to 0 if undefined or null
-    const value = subQuestionValue ?? 0
+    // Handle undefined subQuestionValue properly
+    const value = typeof subQuestionValue === 'number' ? subQuestionValue : 0
 
     const effort =
       recommendation.calculateEffort && value > 0

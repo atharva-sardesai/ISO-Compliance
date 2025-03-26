@@ -99,14 +99,9 @@ export function QuestionnaireScreen({
 
       <Card className="shadow-md">
         <CardHeader className="pb-2">
-          <div className="flex items-start gap-2">
-            <div className="bg-blue-100 p-2 rounded-full mt-0.5">
-              <question.icon className="h-5 w-5 text-blue-600" />
-            </div>
-            <div>
-              <CardTitle className="text-xl text-slate-800">{question.text}</CardTitle>
-              {question.description && <p className="text-sm text-slate-600 mt-1">{question.description}</p>}
-            </div>
+          <div>
+            <CardTitle className="text-xl text-slate-800">{question.text}</CardTitle>
+            {question.description && <p className="text-sm text-slate-600 mt-1">{question.description}</p>}
           </div>
         </CardHeader>
 
